@@ -1,0 +1,59 @@
+ffmpeg version git-2020-03-09-608b8a8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 9.2.1 (GCC) 20200122
+  configuration: --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass --enable-libdav1d --enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-ffnvcodec --enable-cuda-llvm --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth --enable-libopenmpt --enable-amf
+  libavutil      56. 42.100 / 56. 42.100
+  libavcodec     58. 74.100 / 58. 74.100
+  libavformat    58. 40.100 / 58. 40.100
+  libavdevice    58.  9.103 / 58.  9.103
+  libavfilter     7. 77.100 /  7. 77.100
+  libswscale      5.  6.100 /  5.  6.100
+  libswresample   3.  6.100 /  3.  6.100
+  libpostproc    55.  6.100 / 55.  6.100
+Splitting the commandline.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/maklak/AppData/Local/Temp/KritaFFmpegProgress.GkfDCP'.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '12'.
+Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/maklak/allegro-web/src/frame%04d.png'.
+Reading option '-crf' ... matched as AVOption 'crf' with argument '23'.
+Reading option '-preset' ... matched as AVOption 'preset' with argument 'medium'.
+Reading option '-profile:v' ... matched as option 'profile' (set profile) with argument 'baseline'.
+Reading option '-pix_fmt' ... matched as option 'pix_fmt' (set pixel format) with argument 'yuv420p'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'C:\Users\maklak\allegro-web\src\assets' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Applying option nostdin (enable or disable interaction on standard input) with argument 0.
+Applying option progress (write program-readable progress information) with argument C:/Users/maklak/AppData/Local/Temp/KritaFFmpegProgress.GkfDCP.
+[file @ 0000022a981db400] Setting default whitelist 'file,crypto,data'
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:/Users/maklak/allegro-web/src/frame%04d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 12.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/maklak/allegro-web/src/frame%04d.png.
+[image2 @ 0000022a9821b680] Opening 'C:/Users/maklak/allegro-web/src/frame0000.png' for reading
+[file @ 0000022a9821edc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0000022a98226f80] Statistics: 1631 bytes read, 0 seeks
+[image2 @ 0000022a9821b680] Opening 'C:/Users/maklak/allegro-web/src/frame0001.png' for reading
+[file @ 0000022a98227900] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0000022a98227a40] Statistics: 1709 bytes read, 0 seeks
+[image2 @ 0000022a9821b680] Opening 'C:/Users/maklak/allegro-web/src/frame0002.png' for reading
+[file @ 0000022a982279c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0000022a9821edc0] Statistics: 1633 bytes read, 0 seeks
+[image2 @ 0000022a9821b680] Opening 'C:/Users/maklak/allegro-web/src/frame0003.png' for reading
+[file @ 0000022a982279c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0000022a9821f680] Statistics: 1632 bytes read, 0 seeks
+Input #0, image2, from 'C:/Users/maklak/allegro-web/src/frame%04d.png':
+  Duration: 00:00:00.16, start: 0.000000, bitrate: N/A
+    Stream #0:0, 4, 1/25: Video: png, 1 reference frame, rgba(pc), 80x80 [SAR 3937:3937 DAR 1:1], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: output url C:\Users\maklak\allegro-web\src\assets.
+Applying option profile:v (set profile) with argument baseline.
+Applying option pix_fmt (set pixel format) with argument yuv420p.
+Successfully parsed a group of options.
+Opening an output file: C:\Users\maklak\allegro-web\src\assets.
+[NULL @ 0000022a9821df80] Unable to find a suitable output format for 'C:\Users\maklak\allegro-web\src\assets'
+C:\Users\maklak\allegro-web\src\assets: Invalid argument

@@ -1,32 +1,67 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="app">
+        <transition name="fade">
+            <v-navigation-top v-show="navigation[activeSection] !== 'links'" />
+        </transition>
+        <v-navigation
+            :activeSection.sync="activeSection"
+            :navigation="navigation"
+            @scroll="activeSection = $event"
+        />
+        <v-full-page
+            :activeSection.sync="activeSection"
+            @smallWindow="smallWindow = $event"
+            @navigation="navigation = $event"
+        ></v-full-page>
     </div>
-    <router-view/>
-  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import FullPage from "@/components/FullPage";
+import Navigation from "@/components/Navigation";
+import NavigationTop from "@/components/NavigationTop";
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+    name: "App",
+    data() {
+        return {
+            activeSection: 0,
+            smallWindow: false,
+            navigation: []
+        };
+    },
+    components: {
+        "v-full-page": FullPage,
+        "v-navigation": Navigation,
+        "v-navigation-top": NavigationTop
     }
-  }
-}
+};
+</script>
+
+<style lang="sass">
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap')
+
+a
+    color: inherit
+    text-decoration: unset
+
+body
+    margin: 0
+    overflow: hidden
+    font-family: 'Roboto Mono', monospace
+
+.fade-enter-active, .fade-leave-active
+    transition-duration: .25s
+    transform: translateY(0%)
+
+.fade-enter, .fade-leave-to
+    transform: translateY(-100%)
+
+.app
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    position: relative
+    @media (max-height: 640px)
+        font-size: .8em
 </style>
